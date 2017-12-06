@@ -1,32 +1,26 @@
 #include <stdio.h>
 int gcd(int,int);
-
-
 int gcd(int m, int n){
-
-      while(m!=n){
+  while(m!=n){
   	if(m>n){
-	  m=m-n;
-	}
-	else{
-	  n=n-m;
-	}
-      
-      }
-  
-      return m;
-
-    }
+	    m=m-n;
+	  }else{
+	    n=n-m;
+	  }
+  }
+  return m;
+}
 int main(void){
   int a,b,g;
-  printf("解法アルゴリズム２：問題をより小さな問題にする\n");
-  printf("m:");
+  printf("mの数値を入力してください:");
   scanf("%d",&a);
-  printf("n:");
+  printf("nの数値を入力してください:");
   scanf("%d",&b);
   g=gcd(a,b);
+  printf("------------------------\n");
   printf("%dと%dの最大公約数は%d\n",a,b,g);
-  return 0;}
+  return 0;
+}
 
 
 
