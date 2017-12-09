@@ -2,7 +2,11 @@
 #define n 5
 #define WMAX 10
 int C =WMAX;
-typedef struct SOL {int v;int w;int t[n+1];}SOL;
+typedef struct SOL {
+  int v;
+  int w;
+  int t[n+1];
+}SOL;
 static int w[n+1]={0,2,3,4,5,6};
 static int v[n+1]={0,4,5,8,9,11};
 SOL D[1000];
