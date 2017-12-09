@@ -12,7 +12,6 @@ static int v[n+1]={0,4,5,8,9,11};
 SOL D[1000];
 int check(int,int,int);
 
-
 int main(void){
   int i,j,k,m2,Vmax=0,Wmax2=0,t_max[n+1];//V価値　W重さ　T要素
   int m=0,x=0;
