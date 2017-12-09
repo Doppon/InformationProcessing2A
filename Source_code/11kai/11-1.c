@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main(void){
   int i,n,x;
-  printf("F(n)までを求めるn=");
+  printf("解法アルゴリズム１：再帰的なアルゴリズム");
+  printf("F(n)までを求める:n=");
   scanf("%d",&n);
   for(i=0;i<=n;i++){
     x=F(i);
