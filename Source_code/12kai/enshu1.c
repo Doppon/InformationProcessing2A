@@ -42,9 +42,8 @@ int main(void){
 	    Vmax=D[m2].v;
             Wmax2=D[m2].w;
 	    for(j=1;j<=n;j++)t_max[j]=D[m2].t[j];}
-	}	}
-
-
+	}
+  }
 }
     printf("\n");
     m=m2;}
@@ -55,16 +54,15 @@ int main(void){
     if(D[m2].t[x]==1){printf("%d,",x);}}
   printf("\b})\n");
 
-
-
   return 0;
-
-
 }
+
 int check(int m,int i,int k){
   int p;//return 0;重複
   for(p=0;p<=m;p++){
-    if((D[p].v>=D[i].v+v[k])&&(D[p].w==D[i].w+w[k]))return 0;
+    if((D[p].v >= D[i].v+v[k]) && (D[p].w == D[i].w+w[k])){
+      return 0;
+    }
   }
   return 1;
 }
