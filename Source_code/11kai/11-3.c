@@ -9,7 +9,7 @@ int main(void){
     c=a+b;
     a=b;
     b=c;
-    //    printf("aaaaaaaa");
     }
     printf("f(%d)=%d\n",i,b);
+  }
 }
