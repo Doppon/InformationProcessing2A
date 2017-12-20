@@ -37,7 +37,7 @@ int main(void){
             D[m2].t[j]=D[i].t[j];
           }
           D[m2].t[k]=1;
-          //新しく追加した解を表示する
+          //新しく追加した解の表示
           printf("(%d,%d,{",D[m2].v,D[m2].w);
           for(k=1;k<=n;k++){
             if(D[m2].t[k]==1){
