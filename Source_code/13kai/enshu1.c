@@ -3,10 +3,7 @@ int main(void){
   int n;
   printf("硬貨交換する金額を入力：");
   scanf("%d",&n);
- 
- 
-
-  //////////////void Change(x){
+  
   int a,b,c,d;//50 10 5 1
   int m;
   a=n/50; m=n%50;
