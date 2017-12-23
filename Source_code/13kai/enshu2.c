@@ -12,7 +12,8 @@ struct node{ int father;};
 struct arc{
   int no;
   int node1,node2;
-  float cost;};
+  float cost;
+};
 void Kruskal();
 void Sort_Arcs(struct arc a[],int left,int right);
 void Print_Data();
@@ -31,7 +32,8 @@ struct arc ARC[M0+1]={
 {10,1,4,7.0},
 {11,2,3,3.0},
 {12,3,6,11.0},
-{13,4,5,10.0}};
+{13,4,5,10.0}
+};
 int main(void){
   Print_Data();
   Sort_Arcs(ARC,1,M);
@@ -39,34 +41,31 @@ int main(void){
 printf("\n\n3. ツリー総コスト = %7.2f\n",tree_total_cost);
 printf("\n*/");
 return 0;
-
 }
 
-
 void Kruskal(){
-
   int i,k,u,v;
   for(i=1;i<=N;i++)
     NODE[i].father = i;
-  m = 0;
-  for(k=1;k<=M;k++){
-    u = ARC[k].node1;
-    v = ARC[k].node2;
-    while(u!=NODE[u].father)
-      u = NODE[u].father;
-    while(v!=NODE[v].father)
-      v = NODE[v].father;
-    
-    if(u!=v){
-      NODE[u].father = v;
-      tree_total_cost += ARC[k].cost;
-      printf("  %3d  %3d  %3d\t%7.2f\n",ARC[k].no,ARC[k].node1,ARC[k].node2,ARC[k].cost);
-      m++;
+    m = 0;
+    for(k=1;k<=M;k++){
+      u = ARC[k].node1;
+      v = ARC[k].node2;
+      while(u!=NODE[u].father){
+        u = NODE[u].father;
+      }
+      while(v!=NODE[v].father){
+        v = NODE[v].father;
+      }
+      if(u!=v){
+        NODE[u].father = v;
+        tree_total_cost += ARC[k].cost;
+        printf("  %3d  %3d  %3d\t%7.2f\n",ARC[k].no,ARC[k].node1,ARC[k].node2,ARC[k].cost);
+        m++;
+      }
+      if(m>=N-1)
+        break;
     }
-    if(m>=N-1)
-      break;
-  }
-  
 }
 void Sort_Arcs(struct arc a[], int left, int right){//ソート
   int i,j;
