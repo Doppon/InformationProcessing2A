@@ -20,7 +20,7 @@ int main(void){
   //初期化を行う
   D[0].v=0;
   D[0].w=0;
-  for(k=0;k<=n;k++){
+  for(k=1;k<=n;k++){
    D[0].t[k]=0;
   }
   printf("\n(0,0,{0})追加 => 初期化完了!!\n");
@@ -30,21 +30,21 @@ int main(void){
     for(i=0;i<=m;i++){
       if(D[i].w+w[k]<=C){ //重量制限のチェック
 	      if(check(m2,i,k)==1){
-	      m2++;
-	      D[m2].v=D[i].v+v[k];
-	      D[m2].w=D[i].w+w[k];
-	        for(j=1;j<=n;j++){
+          m2++;
+          D[m2].v=D[i].v+v[k];
+          D[m2].w=D[i].w+w[k];
+          for(j=1;j<=n;j++){
             D[m2].t[j]=D[i].t[j];
           }
           D[m2].t[k]=1;
           //新しく追加した解の表示
           printf("(%d,%d,{",D[m2].v,D[m2].w);
-          for(k=1;k<=n;k++){
-            if(D[m2].t[k]==1){
-              printf("%d,",k);
+          for(j=1;j<=n;j++){
+            if(D[m2].t[j]==1){
+              printf("%d,",j);
             }
-          }
-	        printf("\b})を追加\n");
+          }//　ここでkを使うとおかしな事になる
+          printf("\b})を追加\n");
 
           if(D[m2].v>Vmax){
             Vmax=D[m2].v;
