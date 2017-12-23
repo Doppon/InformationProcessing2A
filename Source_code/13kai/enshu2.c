@@ -74,38 +74,29 @@ void Sort_Arcs(struct arc a[], int left, int right){//ソート
     s = a[(left+right)/2];
     i = left - 1;
     j = right + 1;
-    
     while(1){
-      
       while(a[++i].cost<s.cost);
       while(a[--j].cost>s.cost);
-      
-      if(i>=j)
-	break;      
+      if(i>=j){
+        break;
+      }      
       t = a[i];
       a[i] = a[j];
-      a[j] = t;
-      
+      a[j] = t; 
     }
-    
     Sort_Arcs(a,left,i-1);
-    Sort_Arcs(a,j+1,right);
-    
+    Sort_Arcs(a,j+1,right); 
   }
-  
 }
 
 void Print_Data(){
-
   int k;
-  
   printf("/*** 完全最小木問題 ***\n\n");
   printf("1. 入力データ \n");
   printf("  枝  始点  終点  コスト\n");
-  for(k=1;k<=M;k++)
+  for(k=1;k<=M;k++){
     printf("  %3d  %3d  %3d  %7.2f\n",ARC[k].no,ARC[k].node1,ARC[k].node2,ARC[k].cost);
-  
+  }
   printf("\n\n 2. 最小完全木\n");
   printf("  枝  始点  終点  コスト\n");
-  
 }
