@@ -65,8 +65,7 @@ void Kruskal(){
       printf("  %3d  %3d  %3d\t%7.2f\n",ARC[k].no,ARC[k].node1,ARC[k].node2,ARC[k].cost);
       m++;
     }
-    if(m>=N-1)
-      break;
+    if(m>=N-1) break;
   }
 }
 
