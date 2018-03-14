@@ -22,7 +22,6 @@ int main(void){
   stacktop = 0;
   int sides = 0; //TODO: 未定義だったので定義したが合ってるか分からん。
   push(start);
-
   while(stacktop>0){
     n = pop();
     printf("pop=%d ",n);
