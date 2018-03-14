@@ -16,7 +16,7 @@ void pushheap(int *heap,int *n,int x){
     heap[*n]=x;
     i=*n;
     j=i/2;
-    while((j>0)&&(x>heap[j])){
+    while( (j>0) && (x>heap[j]) ){
       heap[i]=heap[j];
       i=j;
       j=i/2;

@@ -26,31 +26,29 @@ void pushheap(int *heap,int *n,int x){
     heap[i]=x;
   }
 }
+
 int maxheap(int *heap,int *n){
   int x,i,j,t;
   if(*n==0){
     printf("Heap Underflow");
     return -1;
-  }else{
+  }
+  else{
     x=heap[1];
     heap[1]=heap[(*n)--];
     i=1;
     while(i*2<=*n){
       j=i*2;
       if((i*2+1<=(*n))&&(heap[i*2]<heap[i*2+1]))j=i*2+1;
-      if(heap[i]>=heap[j])break;
+      if(heap[i]>=heap[j]) break;
       else{
-	t=heap[i];heap[i]=heap[j];heap[j]=t;
+      	t=heap[i];heap[i]=heap[j];heap[j]=t;
       }
       i=j;
     }
   }
   return x;
 }
-
-
-
-
 
 int main(void){
   int i=0,number=0;
@@ -70,6 +68,4 @@ int main(void){
     printheap(heap,number);
   }
   return 0;
-
-
 }
