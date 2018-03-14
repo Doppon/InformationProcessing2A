@@ -24,7 +24,6 @@ int main(void){
   printf("\n*/\n");
 }
 
-
 void DFS_R(int n,int *visit){
   int i;
   printf("Visit:%c(%d)\n",V[n],n);
@@ -32,10 +31,11 @@ void DFS_R(int n,int *visit){
     printf("***solved***Goal=%c(%d)\n",V[n],n);
     return ;
   }
-  for(i=0;i<N;i++)
+  for(i=0;i<N;i++){
     if(w[n][i]==1 && visit[i]==0){
       visit[i]=1; 
       DFS_R(i,visit);
     }
+  }
 }
 
