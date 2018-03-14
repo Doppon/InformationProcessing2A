@@ -32,7 +32,8 @@ int main(void){
       printf("\nVisit:%c\n",V[n]);
       if(n == end){
         printf("***solved***Goal=%c\n",V[n]);
-      }else{
+      }
+      else{
         for(i=N; i>=0; i--){
           if(w[n][i]==1&&visit[i]==0){
             push(i);
