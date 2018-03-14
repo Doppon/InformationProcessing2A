@@ -1,6 +1,6 @@
+#define STACKSIZE 10000
 static int stacktop;
 static int sides;
-#define STACKSIZE 10000
 static int stack[STACKSIZE];
 void push(int x){
   if(stacktop==STACKSIZE){
