@@ -11,14 +11,17 @@ int main(void){
       scanf("%d",&y);
       Enqueue(y);
       printqueue();
-    }else if(x==2){
+    }
+    else if(x==2){
       y=Dequeue();
       printf("Dequeue: %d\n",y);
       printqueue();
-    }else if(x==3){
+    }
+    else if(x==3){
       printf("キューの操作を終了します\n");
       break;
-    }else{
+    }
+    else{
       printf("---Error---\n指定された操作から選択してください\n---\n");
     }
   }
