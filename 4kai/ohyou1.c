@@ -20,7 +20,7 @@ int main(void){
     visit[i] = 0;
   }
   stacktop = 0;
-  int sides = 0; //TODO: 未定義だったので定義したが合ってるか分からん。
+  sides = 0;
   push(start);
   while(stacktop>0){
     n = pop();
