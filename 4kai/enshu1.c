@@ -11,13 +11,16 @@ int main(void){
       scanf("%d",&b);
       push(b);
       printstack(stack);
-    }else if(a==2){
+    }
+    else if(a==2){
       pop();
       printstack(stack);
-    }else if(a==3){
+    }
+    else if(a==3){
       printf("終了します\n");
       break ;
-    }else{
+    }
+    else{
       printf("数値は1から3までです\nもう一度入力してください\n");
       continue ;
     }
