@@ -5,7 +5,6 @@ int heap[HEAPSIZE];
 #define data_number 10
 static int data[data_number]={58,12,39,90,49,26,68,47,15,39};
 void pushheap(int *,int *,int);
-
 void pushheap(int *heap,int *n,int x){
   int i,j;
   if(++(*n)>=HEAPSIZE){
@@ -25,11 +24,6 @@ void pushheap(int *heap,int *n,int x){
   }
 }
 
-
-
-
-
-
 int main(void){
   int i=0,number=0;
   printf("--- データをヒープに格納 ---\n");
@@ -38,7 +32,6 @@ int main(void){
   for(i=0;i<data_number;i++){
     printf("in =%2d",data[i]);
     pushheap(heap,&number,data[i]);
-      printheap(heap,number);
+    printheap(heap,number);
   }
-
 }
