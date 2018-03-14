@@ -21,7 +21,6 @@ int main(void){
   }
   stacktop=0;
   push(start);
-
   while(stacktop>0){
     n=pop();
     printf("pop=%d ",n);
@@ -29,12 +28,13 @@ int main(void){
       visit[n]=1;
       printf("\nVisit:%c\n",V[n]);
       if(n==end){
-        printf("***solved***Goal=%c\n",V[n]);
-      }else{
+        printf("***Solved***Goal=%c\n",V[n]);
+      }
+      else{
         for(i=N;i>=0;i--){
           if(w[n][i]==1&&visit[i]==0){
             push(i);
-            printf("push=%d ",i);
+            printf("push=%d",i);
           }
         }
       }
