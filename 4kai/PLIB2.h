@@ -1,5 +1,5 @@
-static int stacktop;
 #define STACKSIZE 10000
+static int stacktop;
 static int stack[STACKSIZE];
 void push(int x){
   if(stacktop==STACKSIZE){
@@ -9,6 +9,7 @@ void push(int x){
     stack[stacktop++]=x;
   }
 }
+
 int pop(void){
   if(stacktop==0){
     printf("Error:Underflow\n");
