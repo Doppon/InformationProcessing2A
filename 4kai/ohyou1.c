@@ -10,9 +10,6 @@ static int w[N][N]={
   {1,0,0,1,0,1},
   {0,0,0,1,1,0}
 };
-
-
-
 static char V[N+1]="S12345";
 static int start=0;
 static int end=6;
@@ -23,7 +20,7 @@ int main(void){
     visit[i] = 0;
   }
   stacktop = 0;
-  sides = 0;
+  int sides = 0; //TODO: 未定義だったので定義したが合ってるか分からん。
   push(start);
 
   while(stacktop>0){
@@ -32,7 +29,6 @@ int main(void){
     if(visit[n] == 0){
       visit[n] = 1;
       sides = n;
-
       printf("\nVisit:%c\n",V[n]);
       if(n == end){
         printf("***solved***Goal=%c\n",V[n]);
